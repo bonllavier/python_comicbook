@@ -14,7 +14,7 @@ This is a web application that consume the restful API of Comic Vine which is th
 
 ### How to Run:
 1. - Position your comand line tool in the folder where the index.py is located
-2. - run this command:  python index.py
+2. - run this command:  python index.py "INSERT HERE COMIC VINE API KEY"
 3. - The server should be running now
 
 #### Autor
