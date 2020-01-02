@@ -2,20 +2,20 @@
 """
 SunDev Flask App 
 """
-#from flask import Flask, render_template, url_for
-from quart import Quart
-from quart import (
-     abort, redirect, render_template, request, session,
-     url_for,
- )
+from flask import Flask, render_template, url_for
+#from quart import Quart
+#from quart import (
+#     abort, redirect, render_template, request, session,
+#     url_for,
+# )
 import uuid
 import requests
 import datetime
 import sys
 
 # flask setup
-app = Quart(__name__)
-#app = Flask(__name__)
+#app = Quart(__name__)
+app = Flask(__name__)
 app.url_map.strict_slashes = False
 port = 5000
 host = '0.0.0.0'
