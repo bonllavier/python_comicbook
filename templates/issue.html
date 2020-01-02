@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>{{issue_title}} Issue - Javier Bonilla</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded">
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/styles.css') }}">
+	
+	<!-- JS file -->
+	<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/bootstrap/js/bootstrap.min.js') }}"></script>
+	<script src="../static/assets/js/issue.js"></script>
+	<!-- JS file -->
+</head>
+
+<body>
+    <h1 class="text-center main_title"><a href="/">ComicBook</a></h1>
+    <div class="container">
+        <div style="margin-bottom: 62px;">
+            <p class="font_second_title">Issue Detail</p>
+			<hr>
+        </div>
+    </div>
+	<div class="container">
+		<h2 class="font_style1">{{issue_title}}</h2>
+		{{issue_description|safe}}
+		
+		<div class="d-flex justify-content-between">
+			<div>
+				<h3 class="font_style1">Characters</h3>
+				<hr>
+				<ul class="ulist nobull">
+				{% for item in chara_list %}
+					<li>
+						<p><img src="{{item[1]}}" class="shadow-lg issue_detail_chara_photo"/>{{item[0]}} </p>
+					</li>
+				{% endfor %}
+				</ul>
+				
+				<h3 class="font_style1">Creators</h3>
+				<hr>
+				
+				<ul class="ulist nobull">
+				{% for item in creator_list %}
+					<li>
+						<p><img src="{{item[1]}}" class="shadow-lg issue_detail_chara_photo"/>{{item[0]}} </p>
+					</li>
+				{% endfor %}
+				</ul>
+				
+				<h3 class="font_style1">Teams</h3>
+				<hr>
+				
+				<ul class="ulist nobull">
+				{% for item in teams_list %}
+					<li>
+						<p><img src="{{item[1]}}" class="shadow-lg issue_detail_chara_photo"/>{{item[0]}} </p>
+					</li>
+				{% endfor %}
+				</ul>
+				
+				<h3 class="font_style1">Locations</h3>
+				<hr>
+				
+				<ul class="ulist nobull">
+				{% for item in location_list %}
+					<li>
+						<p><img src="{{item[1]}}" class="shadow-lg issue_detail_chara_photo"/>{{item[0]}} </p>
+					</li>
+				{% endfor %}
+				</ul>
+				
+				<h3 class="font_style1">Concepts</h3>
+				<hr>
+				
+				<ul class="ulist nobull">		
+				{% for item in concept_list %}
+					<li>
+						<p><img src="{{item[1]}}" class="shadow-lg issue_detail_chara_photo"/>{{item[0]}} </p>
+					</li>
+				{% endfor %}
+				</ul>
+				
+			</div>
+			<div>
+				
+				<img class="img-fluid issue_d_img" src="{{issue_pict}}">
+				
+			</div>
+		</div>
+	</div>
+
+
+</body>
+
+</html>

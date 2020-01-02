@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>ComicBook SunDev Python Test Javier Bonilla</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded">
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/styles.css') }}">
+	
+	<!-- JS file -->
+	<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/bootstrap/js/bootstrap.min.js') }}"></script>
+	<script src="../static/assets/js/index.js"></script>
+	<!-- JS file -->
+</head>
+
+<body>
+	<div id="loading">
+		<img id="loading-image" src="https://sindicatdellogateres.org/wp-content/uploads/2019/02/loading.gif" alt="Loading..." />
+	</div>
+    <h1 class="text-center main_title"><a href="/">ComicBook</a></h1>
+    <div class="container">
+        <div class="border rounded-0 d-flex float-none justify-content-between second_title_div">
+            <p class="font_second_title">Latest Issue</p>
+            <div class="btn-group" role="group">
+				<button id="list" class="btn list_grid_button" type="button">List<img src="/static/assets/img/list_icon.png" height="15px" class="list_grid_button_icon"></button>
+                <button id="grid" class="btn list_grid_button" type="button">Grid<img src="/static/assets/img/grid_icon.png" height="15px" class="list_grid_button_icon"></button>
+            </div>
+        </div>
+    </div>
+	<div class="container">
+		<div id="products" class="row view-group">
+			{% for item in comic_list %}
+                <div class="item col-sm comic_item" text-align: center name="{{item[5]}}">
+                    <div class="text-center" class="thumbnail card">
+                        <div style="margin-bottom: 25px;"  class="img-event">
+                            <img src="{{item[4]}}" alt="" width="230px" class="shadow-lg card_comic_img"/>
+                        </div>
+                        <div class="caption card-body">
+                            <p class="group inner list-group-item-text card_comic_body_title_1">
+                                <b>{{item[0]}} #{{item[1]}} {{item[2]}}</b></p>
+							<p class="group inner list-group-item-text card_comic_body_title_2">
+								<font size="2">{{item[3]}}</font></p>
+                        </div>
+                    </div>
+                </div>
+			{% endfor %}
+		</div>
+	</div>
+	<footer class="text-center">
+		<button class="btn btn-primary" type="button" id="next_page" >Next Page</button>
+	</footer>
+
+</body>
+
+</html>

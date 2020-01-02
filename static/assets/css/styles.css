@@ -1,0 +1,157 @@
+.view-group {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.thumbnail
+{
+    margin-bottom: 30px;
+    padding: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.item.list-group-item
+{
+    float: none;
+    width: 100%;
+
+    margin-bottom: 30px;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 1rem;
+    border: 0;
+}
+.item.list-group-item .img-event {
+    float: left;
+    width: 25%;
+}
+
+.item.list-group-item .list-group-image
+{
+    margin-right: 10px;
+}
+.item.list-group-item .thumbnail
+{
+    margin-bottom: 0px;
+    display: inline-block;
+}
+.item.list-group-item .caption
+{
+    float: left;
+    width: 70%;
+    margin: 0;
+}
+
+.item.list-group-item:before, .item.list-group-item:after
+{
+    display: table;
+    content: " ";
+}
+
+.item.list-group-item:after
+{
+    clear: both;
+}
+
+
+
+.ulist {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+ .nobull {
+  list-style-type: none;
+  padding-left: 0px;
+ }
+ 
+li img {
+	height: 30px;
+    width: 30px;
+    margin-right: 8px;
+    border-radius: 4px;
+}
+body {
+	background-color: #f2f2f2;
+}
+
+.issue_d_img{
+	width:100%;
+    max-width:400px;
+	
+}
+.font_style1{
+	font-family: 'Encode Sans Semi Expanded', sans-serif;margin-top: 15px;
+}
+#loading {
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   position: fixed;
+   display: block;
+   opacity: 0.7;
+   background-color: #fff;
+   z-index: 99;
+   text-align: center;
+}
+
+#loading-image {
+  position: absolute;
+  top: 100px;
+  left: 240px;
+  z-index: 100;
+}
+
+.main_title {
+	font-family: 'Encode Sans Semi Expanded', sans-serif;
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+.second_title_div {
+	margin-bottom: 62px;
+}
+
+.font_second_title {
+	font-family: 'Encode Sans Semi Expanded', sans-serif;
+	margin-bottom: 6px;
+	margin-top: 6px;
+}
+
+.list_grid_button {
+	background-color: rgba(0,123,255,0);
+	font-family: 'Encode Sans Semi Expanded', sans-serif;
+	color: rgb(0,0,0);
+}
+
+.list_grid_button_icon {
+	height: 18px;
+	margin-right: 0px;
+	margin-left: 6px;
+}
+
+.card_comic_body_title_1 {
+	margin-bottom: 0px; 
+	font-family: 'Encode Sans Semi Expanded', sans-serif;
+}
+.card_comic_body_title_2 {
+	margin-bottom: 0px; 
+	font-family: 'Encode Sans Semi Expanded', sans-serif;
+	color: #999999;
+}
+
+.card_comic_img {
+	border-style: solid; 
+	border-width: 2px;
+}
+
+.issue_detail_chara_photo {
+	border-style: solid; 
+	border-width: 2px;
+}
