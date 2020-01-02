@@ -55,9 +55,11 @@ def display_issue(issue_id):
     """
     url = 'https://comicvine.gamespot.com/api/issue/4000-' + issue_id +'/?api_key=' + apikey + '&format=json'
     response = requests.get(url, headers=headers)
-
-    data = response.json()['results']
-
+    data = []
+    try:
+        data = response.json()['results']
+    except:
+        print("ISSUE NOT FOUND")
     """
     if the data variable doesnt contains anything, this condition will handle that case
     """
@@ -67,6 +69,7 @@ def display_issue(issue_id):
         volume_name = data['volume']['name'] if data['volume']['name'] is not None else ""
         issue_number = data['issue_number'] if data['issue_number'] is not None else ""
         issue_name = data['name'] if data['name'] is not None else ""
+        print(volume_name ,issue_number, issue_name)
         issue_title = str(volume_name + " #" + issue_number + " " + issue_name)
 
         return render_template('issue.html',
