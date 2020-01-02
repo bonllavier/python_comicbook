@@ -17,5 +17,8 @@ This is a web application that consume the restful API of Comic Vine which is th
 2. - run this command:  python index.py "INSERT HERE COMIC VINE API KEY"
 3. - The server should be running now
 
+### Web Application Deployed:
+http://13.82.186.226:5000/1 
+
 #### Autor
 Javier Bonilla // javb92
