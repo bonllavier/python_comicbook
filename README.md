@@ -6,5 +6,16 @@ This is a web application that consume the restful API of Comic Vine which is th
 
 ![](https://ih0.redbubble.net/image.411682602.8572/flat,128x128,075,t.u7.jpg)![](https://cdn.iconscout.com/icon/free/png-256/flask-51-285137.png)![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrfU-hFkMG_C1aDByxRZilMEZk47I33u9Y9vF-2Sxa-u21w0hd&s)
 
+### How to Install:
+1. - Download the repository
+2. - Install python in your computer(make to install PIP too)
+3. - Install FLASK
+4. - Install Quart
+
+### How to Run:
+1. - Position your comand line tool in the folder where the index.py is located
+2. - run this command:  python index.py
+3. - The server should be running now
+
 #### Autor
 Javier Bonilla // javb92
