@@ -111,7 +111,7 @@ def get_chara_info(category , api_data):
     print("len of category: " +category + ": " + str(len(api_data[category])))
     if len(api_data[category]) != 0: 
         for item in api_data[category]:
-            chara_info.append([item['name'], get_person_pict(item['api_detail_url'])])
+            chara_info.append([item['name'], get_person_pict(item['api_detail_url']),item['site_detail_url']])
     else:
         print("empty category: " + category)
     return chara_info

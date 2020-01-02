@@ -17,6 +17,9 @@
 </head>
 
 <body>
+	<div id="loading">
+		<img id="loading-image" src="https://sindicatdellogateres.org/wp-content/uploads/2019/02/loading.gif" alt="Loading..." />
+	</div>
     <h1 class="text-center main_title"><a href="/">ComicBook</a></h1>
     <div class="container">
         <div style="margin-bottom: 62px;">
@@ -34,8 +37,11 @@
 				<hr>
 				<ul class="ulist nobull">
 				{% for item in chara_list %}
-					<li>
-						<p><img src="{{item[1]}}" class="shadow-lg issue_detail_chara_photo"/>{{item[0]}} </p>
+					<li class="list_characters">
+						<a href="{{item[2]}}">
+	    		    		<img src="{{item[1]}}" class="shadow-lg issue_detail_chara_photo">
+							{{item[0]}}
+						</a>
 					</li>
 				{% endfor %}
 				</ul>
@@ -45,8 +51,11 @@
 				
 				<ul class="ulist nobull">
 				{% for item in creator_list %}
-					<li>
-						<p><img src="{{item[1]}}" class="shadow-lg issue_detail_chara_photo"/>{{item[0]}} </p>
+					<li class="list_characters">
+						<a href="{{item[2]}}">
+	    		    		<img src="{{item[1]}}" alt="" class="shadow-lg issue_detail_chara_photo">
+							{{item[0]}}
+						</a>
 					</li>
 				{% endfor %}
 				</ul>
@@ -56,8 +65,11 @@
 				
 				<ul class="ulist nobull">
 				{% for item in teams_list %}
-					<li>
-						<p><img src="{{item[1]}}" class="shadow-lg issue_detail_chara_photo"/>{{item[0]}} </p>
+					<li class="list_characters">
+						<a href="{{item[2]}}">
+	    		    		<img src="{{item[1]}}" alt="" class="shadow-lg issue_detail_chara_photo">
+							{{item[0]}}
+						</a>
 					</li>
 				{% endfor %}
 				</ul>
@@ -67,8 +79,11 @@
 				
 				<ul class="ulist nobull">
 				{% for item in location_list %}
-					<li>
-						<p><img src="{{item[1]}}" class="shadow-lg issue_detail_chara_photo"/>{{item[0]}} </p>
+					<li class="list_characters">
+						<a href="{{item[2]}}">
+	    		    		<img src="{{item[1]}}" alt="" class="shadow-lg issue_detail_chara_photo">
+							{{item[0]}}
+						</a>
 					</li>
 				{% endfor %}
 				</ul>
@@ -78,8 +93,11 @@
 				
 				<ul class="ulist nobull">		
 				{% for item in concept_list %}
-					<li>
-						<p><img src="{{item[1]}}" class="shadow-lg issue_detail_chara_photo"/>{{item[0]}} </p>
+					<li class="list_characters">
+						<a href="{{item[2]}}">
+	    		    		<img src="{{item[1]}}" alt="" class="shadow-lg issue_detail_chara_photo">
+							{{item[0]}}
+						</a>
 					</li>
 				{% endfor %}
 				</ul>
@@ -87,7 +105,7 @@
 			</div>
 			<div>
 				
-				<img class="img-fluid issue_d_img" src="{{issue_pict}}">
+				<img class="img-fluid issue_d_img shadow-lg card_comic_img" src="{{issue_pict}}">
 				
 			</div>
 		</div>
