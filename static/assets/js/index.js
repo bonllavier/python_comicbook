@@ -3,10 +3,12 @@ $(document).ready(function () {
 			$('#list').on('click', function () {
 				console.log("list");
 				$('#products .item').addClass('list-group-item');
+				$('#products .card_comic_img').addClass('img-fluid');
 			});
 			$('#grid').on('click', function () {	
 				console.log("grid");
 				$('#products .item').removeClass('list-group-item');
+				$('#products .card_comic_img').removeClass('img-fluid');
 				$('#products .item').addClass('grid-group-item');
 			});
 			$('#next_page').on('click', function () {	
