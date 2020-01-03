@@ -108,12 +108,16 @@ def get_chara_info(category , api_data):
     handles the iteration for each character category, here we call the method that handles the character picture adquisition
     """
     chara_info = []
-    print("len of category: " +category + ": " + str(len(api_data[category])))
-    if len(api_data[category]) != 0: 
-        for item in api_data[category]:
-            chara_info.append([item['name'], get_person_pict(item['api_detail_url']),item['site_detail_url']])
-    else:
-        print("empty category: " + category)
+    try:
+        print("len of category: " +category + ": " + str(len(api_data[category])))
+        if len(api_data[category]) != 0: 
+            for item in api_data[category]:
+                chara_info.append([item['name'], get_person_pict(item['api_detail_url']),item['site_detail_url']])
+        else:
+
+                print("empty category: " + category)
+    except TypeError:
+        print("get_chara_info(category , api_data) // accept this format only")
     return chara_info
 
 def render_main_page(index_page):
