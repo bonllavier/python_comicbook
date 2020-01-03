@@ -18,6 +18,12 @@ This is a web application that consume the restful API of Comic Vine which is th
   Example: python3 index.py 7basdfgjxxxxxsk4ujeo93u9e9xxxxxxxx
 3. - The server should be running now
 
+### Testing
+#### unittest
+This project uses python library, unittest to run tests on all python files. All unittests are in the ./tests directory with the command:
+
+$ python3 -m unittest discover -v ./tests/
+
 ### Web Application Deployed:
 http://13.82.186.226:5000/1 
 
